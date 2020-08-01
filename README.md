@@ -2,7 +2,7 @@
 
 An interactive data visualization tool.
 
-![Dashboard](www/readme.png)
+![Dashboard](www/readme.PNG)
 
 ### Prerequisites
 
