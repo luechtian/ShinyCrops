@@ -131,6 +131,7 @@ server <- function(input, output, session) {
                     group_by(device_id) %>%
                     filter(field == input$field,
                            date_time == max(date_time)) %>%
+                    ungroup %>%
                     summarise(mean = mean(temperature_celsius)) %>%
                     pull() %>%
                     round(),
@@ -149,6 +150,7 @@ server <- function(input, output, session) {
                     group_by(device_id) %>%
                     filter(field == input$field,
                            date_time == max(date_time)) %>%
+                    ungroup %>%
                     summarise(mean = mean(humidity_percent)) %>%
                     pull() %>%
                     round(),
